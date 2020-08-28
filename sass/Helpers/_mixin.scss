@@ -1,0 +1,44 @@
+@mixin headingText($fs) {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: $fs;
+}
+
+@mixin text($color, $fs) {
+	color: $color;
+	font-size: $fs;
+}
+
+@mixin button($bg-color, $color) {
+	background-color: $bg-color;
+	color: $color;
+	padding: 7px 16px;
+}
+
+@mixin responsive($screen) {
+	@if map-has-key($map: $breakpoints, $key: $screen) {
+		$value: map-get(
+			$map: $breakpoints,
+			$key: $screen,
+		);
+		@media screen and (max-width: $value) {
+			@content;
+		}
+	} @else {
+		@warn "Error";
+	}
+}
+
+@mixin responsiveMin($screen) {
+	@if map-has-key($map: $breakpoints, $key: $screen) {
+		$value: map-get(
+			$map: $breakpoints,
+			$key: $screen,
+		);
+		@media screen and (min-width: $value) {
+			@content;
+		}
+	} @else {
+		@warn "Error";
+	}
+}

@@ -1,0 +1,88 @@
+.register {
+	h2 {
+		@include headingText($fs-3);
+
+		margin-bottom: $mg-2 + 5;
+		padding-bottom: $mg-2 + 5;
+		border-bottom: 2px solid $color-black-1;
+		&:before {
+			content: '';
+			width: 60px;
+			height: 2px;
+			background-color: white;
+			display: block;
+			margin-bottom: $mg-2 - 4;
+		}
+	}
+	.row {
+		align-items: center;
+		@include text($color-gray-primary, $fs-0);
+		.register__item:first-child {
+			form {
+				.register__email {
+					display: flex;
+					width: 100%;
+					margin-bottom: $mg-1;
+					input {
+						width: 60%;
+						outline: none;
+						border: 0.5px solid $color-black-input;
+						@include headingText($fs-2);
+						background-color: $color-black-input;
+						font-weight: 400;
+						padding: 3px 14px;
+						border-radius: 0;
+						color: white;
+						&::placeholder {
+							color: white;
+						}
+						&:focus {
+							border-color: rgba(255, 255, 255, 0.3);
+						}
+					}
+					.search__submit {
+						width: 30%;
+						background: linear-gradient(#303030, #202020);
+						padding: 3px 14px;
+						font-size: $fs-1;
+						display: flex;
+						align-items: center;
+						cursor: pointer;
+						i {
+							margin-right: 10px;
+						}
+						&:hover {
+							color: $color-blue-primary;
+						}
+					}
+				}
+				a {
+					color: white;
+					&:hover {
+						color: $color-blue-primary;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.register__item:last-child {
+			.register__social {
+				display: flex;
+				justify-content: space-between;
+				font-size: $fs-2;
+				a {
+					color: $color-gray-primary;
+					&:hover {
+						color: $color-blue-primary;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include responsive('md') {
+	.register__item:last-child {
+		margin-top: 20px;
+	}
+}

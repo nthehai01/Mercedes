@@ -1,0 +1,91 @@
+@include responsive("md") {
+	.brandhub {
+		position: fixed;
+		bottom: 0;
+		z-index: 10;
+		overflow: hidden;
+		background-color: black;
+		width: 100%;
+		ul {
+			display: flex;
+			width: 100%;
+			margin: 0;
+			li {
+				list-style: none;
+				width: 24.9%;
+				background-color: $color-black-dark;
+				margin: 1px;
+				a {
+					color: white;
+					height: 60px;
+					line-height: 20px;
+					text-align: center;
+					i {
+						font-size: $fs-2 + 2;
+						width: 100%;
+						text-align: center;
+						line-height: 40px;
+					}
+					p {
+						font-size: $fs-1;
+					}
+					.brandhub-icon__none {
+						display: none;
+					}
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include responsiveMin("md") {
+	.brandhub {
+		position: fixed;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 10;
+		overflow: hidden;
+		transform: translateX(230px);
+		transition: all 0.7s;
+		ul {
+			li {
+				list-style: none;
+				height: 44px;
+				width: 274px;
+				background-color: $color-black-dark;
+				margin: 1px;
+				transition: all 0.7s;
+				a {
+					color: white;
+					line-height: 44px;
+					display: flex;
+					span {
+						font-size: $fs-2 - 1;
+					}
+					i {
+						font-size: $fs-2 + 2;
+						line-height: 44px;
+						width: 44px;
+						text-align: center;
+					}
+					&:hover {
+						text-decoration: none;
+					}
+					.brandhub-text__none {
+						display: none;
+					}
+				}
+			}
+		}
+		&:hover {
+			transform: translateX(0);
+		}
+		&:hover li:not(:hover) {
+			transform: translateX(230px);
+		}
+	}
+}

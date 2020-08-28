@@ -1,0 +1,24 @@
+.information {
+    @include text(white, $fs-1);
+    .information__fuel {
+        margin-bottom: $mg-2 - 4;
+        span {
+            margin: 0 $mg-1 - 4;
+        }
+    }
+    .information__text {
+        p:not(:last-child) {
+            margin-bottom: $mg-1;
+        }
+    }
+}
+
+@include responsive("average") {
+    .information {
+        .information__fuel {
+            span:last-child {
+                display: block;
+            }
+        }
+    }
+}

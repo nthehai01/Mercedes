@@ -1,0 +1,19 @@
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+section {
+    margin: 0 $pd-x-primary;
+    padding: $pd-y 0;
+}

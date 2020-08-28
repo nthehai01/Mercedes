@@ -1,0 +1,54 @@
+.welcome {
+    .welcome__container {
+        max-width: 750px;
+        h2 {
+            @include headingText($fs-3);
+            margin-bottom: $mg-1;
+            &:before {
+                content: "";
+                width: 60px;
+                height: 2px;
+                background-color: white;
+                display: block;
+                margin-bottom: $mg-2 - 4;
+            }
+        }
+        .welcome__text {
+            max-width: 600px;
+            margin-bottom: $mg-2 * 2;
+            p {
+                @include text(white, $fs-1);
+                margin-bottom: $mg-2 - 4;
+            }
+            a {
+                @include text($color-blue-primary, $fs-1);
+                &:hover {
+                    color: $color-blue-dark;
+                }
+            }
+        }
+        button {
+            @include button($color-blue-primary, white);
+            border: none;
+            &:hover {
+                background-color: $color-blue-dark;
+            }
+        }
+    }
+}
+
+@include responsive("lg") {
+    .welcome {
+        padding: $pd-y $pd-x-primary;
+    }
+}
+
+@include responsive("md") {
+    .welcome {
+        .welcome__container {
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

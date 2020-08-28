@@ -1,0 +1,20 @@
+@import './Helpers/_variables.scss';
+@import './Helpers/_mixin.scss';
+
+@import './Base/_reset.scss';
+
+@import './Layouts/_navbar.scss';
+@import './Layouts/_carousel.scss';
+@import './Layouts/_search.scss';
+@import './Layouts/_welcome.scss';
+@import './Layouts/_channel.scss';
+@import './Layouts/_information.scss';
+@import './Layouts/_news.scss';
+@import './Layouts/_discover.scss';
+@import './Layouts/_register.scss';
+@import './Layouts/_variant.scss';
+@import './Layouts/_contact.scss';
+@import './Layouts/_footer.scss';
+@import './Layouts/_brandhub.scss';
+
+@import './Component/_content-on-scroll.scss';

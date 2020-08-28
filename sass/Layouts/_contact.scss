@@ -1,0 +1,13 @@
+.contact {
+    border-top: 2px solid $color-black-1;
+    p {
+        @include text($color-gray-primary, $fs-1);
+        a {
+            color: white;
+            &:hover {
+                color: $color-blue-primary;
+                text-decoration: none;
+            }
+        }
+    }
+}

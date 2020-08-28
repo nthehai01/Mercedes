@@ -1,0 +1,12 @@
+.variant {
+    border-top: 2px solid $color-black-1;
+    padding: $pd-x-primary;
+    &__item {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 150px;
+            margin: $mg-2 + 3 0;
+        }
+    }
+}

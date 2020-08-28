@@ -1,0 +1,41 @@
+.discover {
+    h2 {
+        @include headingText($fs-3);
+        margin-bottom: $mg-2 + 5;
+        padding-bottom: $mg-2 + 5;
+        border-bottom: 2px solid $color-black-1;
+        &:before {
+            content: "";
+            width: 60px;
+            height: 2px;
+            background-color: transparent;
+            display: block;
+            margin-bottom: $mg-2 - 4;
+        }
+        &.discover__heading:before {
+            background-color: white;
+        }
+    }
+    .row {
+        ul {
+            li {
+                list-style: none;
+                a {
+                    @include text($color-gray-primary, $fs-1);
+                    &:hover {
+                        color: $color-blue-primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("lg") {
+    .row {
+        .discover__item:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.channel {
+    .channel__item {
+        padding: $pd-3 - 3;
+        a {
+            .channel__content {
+                position: relative;
+                img {
+                    width: 100%;
+                    transition: all 0.5s;
+                    &:hover {
+                        border-color: $color-blue-primary;
+                    }
+                }
+                .channel__border {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    border-bottom: 0 solid $color-blue-primary;
+                    transition: all 0.3s;
+                }
+            }
+            &:hover .channel__border {
+                border-width: 5px;
+            }
+        }
+    }
+}
+
+@include responsive("lg") {
+    .channel {
+        padding: $pd-y $pd-x-primary;
+    }
+}

@@ -1,0 +1,29 @@
+.search {
+    padding: $pd-x-primary 0;
+    background-color: $color-black-search;
+    margin-bottom: $pd-y;
+    .container {
+        form {
+            background-color: $color-white-search;
+            display: flex;
+            align-items: center;
+            input {
+                background-color: transparent;
+                width: 100%;
+                padding: 4px 14px;
+                border: none;
+                font-size: $fs-0 + 2;
+                letter-spacing: 1px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .search__submit {
+                padding: 0 $pd-2;
+                background-color: transparent;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}
